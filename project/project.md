@@ -60,3 +60,5 @@ property sector might be the most impacted sector in this pandemic, thus
 resulting in a long time to recover. The program will be able to learn
 continuously, so if new data is available, it can renew the analysis and
 give a more accurate prediction.
+
+asassasa
