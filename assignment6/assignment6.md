@@ -28,10 +28,10 @@ Here are some examples of how AI helps clinical decision [6]:
 2.	The Advanced Alert Monitoring system developed and deployed by Kaiser Permanente uses Intensive Care Unit (ICU) data to predict fatally deteriorating cases and alert staff to the need of life-saving interventions.
 
 ## References
-[^1] A. Hosny, C. Parmar, J. Quackenbush, L. H. Schwartz, and H. J. W. L. Aerts, “Artificial intelligence in radiology,” Nature reviews. Cancer, Aug-2018. [Online]. Available: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6268174/. [Accessed: 20-Oct-2020]. 
-[^2]G. Fox, “Introduction to AI in Health and Medicine,” Cybertraining, 01-Oct-2020. [Online]. Available: https://cybertraining-dsc.github.io/modules/bigdataapplications/2020/health_and_medicine/. [Accessed: 20-Oct-2020]. 
-[^3] “Imaging and radiology: MedlinePlus Medical Encyclopedia,” MedlinePlus. [Online]. Available: https://medlineplus.gov/ency/article/007451.htm. [Accessed: 20-Oct-2020]. 
-[^4] “Microcalcification,” Wikipedia, 30-Jul-2019. [Online]. Available: https://en.wikipedia.org/wiki/Microcalcification. [Accessed: 20-Oct-2020]. 
-[^5]S. Daley, “32 Examples of AI in Healthcare That Will Make You Feel Better About the Future,” Built In. [Online]. Available: https://builtin.com/artificial-intelligence/artificial-intelligence-healthcare. [Accessed: 20-Oct-2020]. 
-[^6] T. D. S. E. Team, “AI in Clinical Decision Support: Roadblocks & Opportunities,” Medium, 14-Jul-2020. [Online]. Available: https://towardsdatascience.com/ai-in-clinical-decision-support-roadblocks-opportunities-fddb3311fe99. [Accessed: 20-Oct-2020]. 
+[^1]: A. Hosny, C. Parmar, J. Quackenbush, L. H. Schwartz, and H. J. W. L. Aerts, “Artificial intelligence in radiology,” Nature reviews. Cancer, Aug-2018. [Online]. Available: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6268174/. [Accessed: 20-Oct-2020]. 
+[^2]:G. Fox, “Introduction to AI in Health and Medicine,” Cybertraining, 01-Oct-2020. [Online]. Available: https://cybertraining-dsc.github.io/modules/bigdataapplications/2020/health_and_medicine/. [Accessed: 20-Oct-2020]. 
+[^3]: “Imaging and radiology: MedlinePlus Medical Encyclopedia,” MedlinePlus. [Online]. Available: https://medlineplus.gov/ency/article/007451.htm. [Accessed: 20-Oct-2020]. 
+[^4]: “Microcalcification,” Wikipedia, 30-Jul-2019. [Online]. Available: https://en.wikipedia.org/wiki/Microcalcification. [Accessed: 20-Oct-2020]. 
+[^5]: S. Daley, “32 Examples of AI in Healthcare That Will Make You Feel Better About the Future,” Built In. [Online]. Available: https://builtin.com/artificial-intelligence/artificial-intelligence-healthcare. [Accessed: 20-Oct-2020]. 
+[^6]: T. D. S. E. Team, “AI in Clinical Decision Support: Roadblocks & Opportunities,” Medium, 14-Jul-2020. [Online]. Available: https://towardsdatascience.com/ai-in-clinical-decision-support-roadblocks-opportunities-fddb3311fe99. [Accessed: 20-Oct-2020]. 
 
