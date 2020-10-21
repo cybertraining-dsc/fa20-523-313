@@ -6,15 +6,15 @@ Keywords: stock, market, predictive analytics, LSTM, random forest, regression, 
 ## 1. Introduction
 The COVID-19 Pandemic is not just a crisis in the public health sector. It also impacts unemployment rates, business revenues, and mass psychology, which in the end lead to crashes in global stock markets. While some stock indexes like the Dow Jones Industrial Average (DJIA) and NASDAQ Composite have already recovered, the Indonesian Stock Market Index (IDX Composite) is still far below its price before the pandemic.
 Some of the possible causes are: 
-1.        Foreign investments represent about 50% of the total fund in the IDX stock exchange. In a pandemic situation, foreign investors might choose to withdraw their stocks and find another safer country to invest in.
-2.        Unpredictability of the pandemic situation drives investors to reallocate their funds in safer assets, such as cash, gold, or USD.
-3.        Changes in the macroeconomic situation, such as unemployment rate, Indonesian Rupiah (IDR) exchange rate, and interest rate. 
-4.        Changes in the consumer buying power also change the business revenues, thus changing fundamental data.
-5.        Mass psychology of investors that the stock market is not safe in this pandemic situation, holding them from returning to the stock market
+1. Foreign investments represent about 50% of the total fund in the IDX stock exchange. In a pandemic situation, foreign investors might choose to withdraw their stocks and find another safer country to invest in.
+2. Unpredictability of the pandemic situation drives investors to reallocate their funds in safer assets, such as cash, gold, or USD.
+3. Changes in the macroeconomic situation, such as unemployment rate, Indonesian Rupiah (IDR) exchange rate, and interest rate. 
+4. Changes in the consumer buying power also change the business revenues, thus changing fundamental data.
+5. Mass psychology of investors that the stock market is not safe in this pandemic situation, holding them from returning to the stock market
 To predict the time needed for IDX Composite to recover, two indicators can be utilized:
-1.        Fundamental indicators, which represent the financial aspect. This can be in the form of macroeconomic data and a company financial report 
-2.        Technical indicators, which represent the mass psychology of investors. This can be obtained from statistical analysis of how the stock market moves
-3.        Sentiment analysis, which represents the mass psychology of Indonesian people. This can be obtained from Twitter and Google Trends.
+1. Fundamental indicators, which represent the financial aspect. This can be in the form of macroeconomic data and a company financial report 
+2. Technical indicators, which represent the mass psychology of investors. This can be obtained from statistical analysis of how the stock market moves
+3. Sentiment analysis, which represents the mass psychology of Indonesian people. This can be obtained from Twitter and Google Trends.
 ## 2. Background Research and Previous Work
 Predicting the stock market offers great profit, thus it is a widely popular research area. While there is no specific paper addressing how to predict market recovery, there are some researches related to this area that can be utilized in this study.
 ### 2.1 Predicting Long Term Stock Price Movement using the Random Forest Algorithm
