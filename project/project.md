@@ -11,10 +11,12 @@ Some of the possible causes are:
 3. Changes in the macroeconomic situation, such as unemployment rate, Indonesian Rupiah (IDR) exchange rate, and interest rate. 
 4. Changes in the consumer buying power also change the business revenues, thus changing fundamental data.
 5. Mass psychology of investors that the stock market is not safe in this pandemic situation, holding them from returning to the stock market
+
 To predict the time needed for IDX Composite to recover, two indicators can be utilized:
 1. Fundamental indicators, which represent the financial aspect. This can be in the form of macroeconomic data and a company financial report 
 2. Technical indicators, which represent the mass psychology of investors. This can be obtained from statistical analysis of how the stock market moves
-3. Sentiment analysis, which represents the mass psychology of Indonesian people. This can be obtained from Twitter and Google Trends.
+3. Sentiment analysis, which represents the mass psychology of Indonesian people. This can be obtained from Twitter and Google Trends
+
 ## 2. Background Research and Previous Work
 Predicting the stock market offers great profit, thus it is a widely popular research area. While there is no specific paper addressing how to predict market recovery, there are some researches related to this area that can be utilized in this study.
 ### 2.1 Predicting Long Term Stock Price Movement using the Random Forest Algorithm
