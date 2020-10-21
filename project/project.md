@@ -36,7 +36,7 @@ This section will be addressed upon project completion.
 ## 6. Conclusion
 This section will be addressed upon project completion.
 ## 7. Acknowledgements
-The author would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and the associate instructors in the FA20-BL-ENGR-E534-11530: Big Data Applications course (offered in the Fall 2020 semester at Indiana University, Bloomington) for their continued assistance and suggestions concerning exploring this idea and also for their aid with preparing the various drafts of this article.
+The author would like to thank Dr. Geoffrey Fox, Dr. Gregor Von Laszewski, and the associate instructors in the FA20-BL-ENGR-E534-11530: Big Data Applications course (offered in the Fall 2020 semester at Indiana University, Bloomington) for their continued assistance and suggestions with concerning exploring this idea and also for their aid with preparing the various drafts of this article.
 ## 8. References
 [^1]: A. Nikfarjam, E. Emadzadeh, and S. Muthaiyah, “Text mining approaches for stock market prediction,” 2010 The 2nd International Conference on Computer and Automation Engineering (ICCAE), 2010.
 
