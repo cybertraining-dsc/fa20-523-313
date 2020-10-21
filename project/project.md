@@ -30,7 +30,7 @@ In predicting the outcome, these datasets will be utilized:
 Yahoo Finance (finance.yahoo.com). Yahoo Finance contains a lot of both fundamental and technical data, and they are free of charge.
 Twitter (twitter.com). Sentiment analysis on Twitter will be conducted to represent the mass psychology regarding the economic condition in Indonesia
 ## 4. Methodology
-In this study, we will predict market movement in the next two years using two approaches, which are the fundamental approach, and technical approach accompanied by sentiment analysis. The fundamental approach will utilize the random forest algorithm, while the technical approach will utilize the bidirectional gated recurrent unit (BGRU), which is considered a variant of LTSM. In the second approach, we will use news from Twitter's official accounts and historical stock prices to predict the market.  
+In this study, we will predict market movement in the next two years using two approaches, which are the fundamental approach, and technical approach accompanied by sentiment analysis. The fundamental approach will utilize the random forest algorithm, while the technical approach will utilize the bidirectional gated recurrent unit (BGRU), which is considered a variant of LSTM. In the second approach, we will use news from Twitter's official accounts and historical stock prices to predict the market.  
 ## 5. Inference
 This section will be addressed upon project completion.
 ## 6. Conclusion
