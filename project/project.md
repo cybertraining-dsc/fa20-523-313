@@ -17,7 +17,7 @@ Contents
 
 **Keywords:** TBD
 
-- [ ] Please use our template
+- git pull ] Please use our template
 - [ ] please use empty lines after each context change
 - [ ] Please learn markdown
 - [ ] refernces must be cited
@@ -49,7 +49,7 @@ Milosevic [^6] uses some machine learning algorithms to predict whether some com
 
 ### 2.2 Predicting the Next Recession using Long Short-term Memory (LSTM) Algorithm
 
-Another long term prediction in this area is from Khedkar [7]. He used LSTM in predicting the next recession in India. In this study, the stock closing price data is used, instead of financial data – which is technical analysis. LSTM networks are well-suited to classifying, processing, and making predictions based on time series data, since there can be lags of unknown duration between important events in a time series. The study managed to predict the stock market crash in 2020.
+Another long term prediction in this area is from Khedkar [^7]. He used LSTM in predicting the next recession in India. In this study, the stock closing price data is used, instead of financial data – which is technical analysis. LSTM networks are well-suited to classifying, processing, and making predictions based on time series data, since there can be lags of unknown duration between important events in a time series. The study managed to predict the stock market crash in 2020.
 
 ### 2.3 Stock Market Prediction Using Text Mining
 
