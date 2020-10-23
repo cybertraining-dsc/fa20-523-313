@@ -1,5 +1,9 @@
 # Predicting Stock Market Recovery After Pandemic
 
+- [ ] please use empty lines after each context change
+- [ ] Please learn markdown
+- [ ] refernces must be cited
+
 Fauzan Isnaini, [fa20-523-313](https://github.com/cybertraining-dsc/fa20-523-313/), [Edit](https://github.com/cybertraining-dsc/fa20-523-313/blob/master/project/project.md)
 
 {{% pageinfo %}}
@@ -17,10 +21,6 @@ Contents
 
 **Keywords:** TBD
 
-- git pull ] Please use our template
-- [ ] please use empty lines after each context change
-- [ ] Please learn markdown
-- [ ] refernces must be cited
 
 ## 1. Introduction
 
