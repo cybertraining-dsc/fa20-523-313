@@ -1,16 +1,26 @@
 # Predicting Stock Market Recovery After Pandemic
 
-- [ ] Please use our template
-- [ ] please use empty lines after each context change
-- [ ] Please learn markdown
-- [ ] refernces must be cited
+Fauzan Isnaini, [fa20-523-313](https://github.com/cybertraining-dsc/fa20-523-313/), [Edit](https://github.com/cybertraining-dsc/fa20-523-313/blob/master/project/project.md)
 
-Fauzan Isnaini, fa20-523-313
+{{% pageinfo %}}
 
 ## Abstract
 
 Predicting the stock market is a complex task with lots of different variables comes into play. While it is difficult to predict the short-term volatility, there are several approaches to forecast the stock market in the long term.  In this paper, we will analyze multiple methods to forecast the Indonesian Stock Exchange (IDX) recovery after the Covid-19 pandemic. The forecast will be based on technical analysis, fundamental analysis, and sentiment analysis.
 Keywords: stock, market, predictive analytics, LSTM, random forest, regression, fundamental analysis, technical analysis, sentiment analysis, pandemic
+
+Contents
+
+{{< table_of_contents >}}
+
+{{% /pageinfo %}}
+
+**Keywords:** TBD
+
+- [ ] Please use our template
+- [ ] please use empty lines after each context change
+- [ ] Please learn markdown
+- [ ] refernces must be cited
 
 ## 1. Introduction
 
