@@ -1,8 +1,5 @@
 # Predicting Stock Market Recovery After Pandemic
 
-- [ ] please use empty lines after each context change
-- [ ] Please learn markdown
-- [ ] refernces must be cited
 
 Fauzan Isnaini, [fa20-523-313](https://github.com/cybertraining-dsc/fa20-523-313/), [Edit](https://github.com/cybertraining-dsc/fa20-523-313/blob/master/project/project.md)
 
@@ -11,7 +8,6 @@ Fauzan Isnaini, [fa20-523-313](https://github.com/cybertraining-dsc/fa20-523-313
 ## Abstract
 
 Predicting the stock market is a complex task with lots of different variables comes into play. While it is difficult to predict the short-term volatility, there are several approaches to forecast the stock market in the long term.  In this paper, we will analyze multiple methods to forecast the Indonesian Stock Exchange (IDX) recovery after the Covid-19 pandemic. The forecast will be based on technical analysis, fundamental analysis, and sentiment analysis.
-Keywords: stock, market, predictive analytics, LSTM, random forest, regression, fundamental analysis, technical analysis, sentiment analysis, pandemic
 
 Contents
 
@@ -19,7 +15,7 @@ Contents
 
 {{% /pageinfo %}}
 
-**Keywords:** TBD
+**Keywords:** stock, market, predictive analytics, LSTM, random forest, regression, fundamental analysis, technical analysis, sentiment analysis, pandemic 
 
 
 ## 1. Introduction
@@ -85,7 +81,7 @@ The author would like to thank Dr. Geoffrey Fox, Dr. Gregor Von Laszewski, and t
 
 [^3]: C. Stoean, W. Paja, R. Stoean, and A. Sandita, “Deep architectures for long-term stock price prediction with a heuristic-based strategy for trading simulations,” Plos One, vol. 14, no. 10, 2019.
 
-[^4] F. S. Alzazah and X. Cheng, “Recent Advances in Stock Market Prediction Using Text Mining: A Survey,” E-Business [Working Title], 2020.
+[^4]: F. S. Alzazah and X. Cheng, “Recent Advances in Stock Market Prediction Using Text Mining: A Survey,” E-Business [Working Title], 2020.
 
 [^5]: N. Chauhan, “Stock Market Forecasting Using Time Series Analysis,” KDnuggets, 2020. [Online]. Available: https://www.kdnuggets.com/2020/01/stock-market-forecasting-time-series-analysis.html. [Accessed: 20-Oct-2020].
 
