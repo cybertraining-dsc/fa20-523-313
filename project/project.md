@@ -77,17 +77,17 @@ The author would like to thank Dr. Geoffrey Fox, Dr. Gregor Von Laszewski, and t
 
 ## 8. References
 
-[^1]: A. Nikfarjam, E. Emadzadeh, and S. Muthaiyah, “Text mining approaches for stock market prediction,” 2010 The 2nd International Conference on Computer and Automation Engineering (ICCAE), 2010.
+[^1]: A. Nikfarjam, E. Emadzadeh, and S. Muthaiyah, "Text mining approaches for stock market prediction," 2010 The 2nd International Conference on Computer and Automation Engineering (ICCAE), 2010.
 
-[^2]: A. Singh, “Stock Price Prediction Using Machine Learning: Deep Learning,” Analytics Vidhya, 18-Oct-2020. [Online]. Available: https://www.analyticsvidhya.com/blog/2018/10/predicting-stock-price-machine-learningnd-deep-learning-techniques-python/. [Accessed: 20-Oct-2020].
+[^2]: A. Singh, "Stock Price Prediction Using Machine Learning: Deep Learning, " Analytics Vidhya, 18-Oct-2020. [Online]. Available: <https://www.analyticsvidhya.com/blog/2018/10/predicting-stock-price-machine-learningnd-deep-learning-techniques-python/>. [Accessed: 20-Oct-2020].
 
-[^3]: C. Stoean, W. Paja, R. Stoean, and A. Sandita, “Deep architectures for long-term stock price prediction with a heuristic-based strategy for trading simulations,” Plos One, vol. 14, no. 10, 2019.
+[^3]: C. Stoean, W. Paja, R. Stoean, and A. Sandita, "Deep architectures for long-term stock price prediction with a heuristic-based strategy for trading simulations," Plos One, vol. 14, no. 10, 2019.
 
-[^4]: F. S. Alzazah and X. Cheng, “Recent Advances in Stock Market Prediction Using Text Mining: A Survey,” E-Business [Working Title], 2020.
+[^4]: F. S. Alzazah and X. Cheng, "Recent Advances in Stock Market Prediction Using Text Mining: A Survey," E-Business [Working Title], 2020.
 
-[^5]: N. Chauhan, “Stock Market Forecasting Using Time Series Analysis,” KDnuggets, 2020. [Online]. Available: https://www.kdnuggets.com/2020/01/stock-market-forecasting-time-series-analysis.html. [Accessed: 20-Oct-2020].
+[^5]: N. Chauhan, "Stock Market Forecasting Using Time Series Analysis," KDnuggets, 2020. [Online]. Available: <https://www.kdnuggets.com/2020/01/stock-market-forecasting-time-series-analysis.html>. [Accessed: 20-Oct-2020].
 
-[^6]: N. Milosevic, “Equity forecast: Predicting long term stock price movement using machine learning,” 2018.
+[^6]: N. Milosevic, "Equity forecast: Predicting long term stock price movement using machine learning," 2018.
 
-[^7]: S. Khedkar, “Stock Market Prediction Using Deep Learning and Python,” Medium, 27-Sep-2019. [Online]. Available: https://medium.com/analytics-vidhya/stock-market-prediction-using-python-article-4-the-next-recession-923185a2736f. [Accessed: 20-Oct-2020].
+[^7]: S. Khedkar, "Stock Market Prediction Using Deep Learning and Python," Medium, 27-Sep-2019. [Online]. Available: <https://medium.com/analytics-vidhya/stock-market-prediction-using-python-article-4-the-next-recession-923185a2736f>. [Accessed: 20-Oct-2020].
 
