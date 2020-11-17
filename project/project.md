@@ -61,7 +61,7 @@ Twitter (twitter.com). Sentiment analysis on Twitter will be conducted to repres
 
 ## 4. Methodology
 
-In this study, we will predict market movement in the next two years using two approaches, which are the fundamental approach, and technical approach accompanied by sentiment analysis. The fundamental approach will utilize the random forest algorithm, while the technical approach will utilize the bidirectional gated recurrent unit (BGRU), which is considered a variant of LSTM. In the second approach, we will use news from Twitter's official accounts and historical stock prices to predict the market.  
+In this study, we will predict market movement in the next two years using technical approach accompanied by sentiment analysis. While fundamental approach is a strong predictor of the long term stock price movement for an individual stock, it is very difficult to utilize it in an index like IDX composite because it will takes too many variables. The technical approach will utilize the bidirectional gated recurrent unit (BGRU), which is considered a variant of LSTM. In the second approach, we will use news from Twitter's official accounts and historical stock prices to predict the market.  
 
 ## 5. Inference
 
@@ -80,6 +80,7 @@ The author would like to thank Dr. Geoffrey Fox, Dr. Gregor Von Laszewski, and t
 [^1]: A. Nikfarjam, E. Emadzadeh, and S. Muthaiyah, "Text mining approaches for stock market prediction," 2010 The 2nd International Conference on Computer and Automation Engineering (ICCAE), 2010.
 
 [^2]: A. Singh, "Stock Price Prediction Using Machine Learning: Deep Learning, " Analytics Vidhya, 18-Oct-2020. [Online]. Available: <https://www.analyticsvidhya.com/blog/2018/10/predicting-stock-price-machine-learningnd-deep-learning-techniques-python/>. [Accessed: 20-Oct-2020].
+
 
 [^3]: C. Stoean, W. Paja, R. Stoean, and A. Sandita, "Deep architectures for long-term stock price prediction with a heuristic-based strategy for trading simulations," Plos One, vol. 14, no. 10, 2019.
 
