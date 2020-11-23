@@ -64,7 +64,7 @@ Twitter (twitter.com). Sentiment analysis on Twitter will be conducted to repres
 
 ## 4. Methodology
 
-In this study, we will predict market movement in the next two years using technical approach accompanied by sentiment analysis. While fundamental approach is a strong predictor of the long term stock price movement for an individual stock, it is very difficult to utilize it in an index like IDX composite because it will takes too many variables. The technical approach will utilize the bidirectional gated recurrent unit (BGRU), which is considered a variant of LSTM. In the second approach, we will use news from Twitter's official accounts and historical stock prices to predict the market.  
+In this study, we will predict market movement in the next two years using technical approach accompanied by sentiment analysis. While fundamental approach is a strong predictor of the long term stock price movement for an individual stock, it is very difficult to utilize it in an index like IDX composite because it will takes too many variables. The technical approach will utilize the bidirectional gated recurrent unit (BGRU), which is considered a variant of LSTM. In the second approach, we will use news from Twitter's official accounts and historical stock prices to predict the market.
 
 ## 5. Inference
 
