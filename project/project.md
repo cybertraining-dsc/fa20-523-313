@@ -1,4 +1,4 @@
-# Predicting Stock Market Recovery After Pandemic
+# Analyzing LSTM Performance on Predicting Stock Market for Multiple Time Steps
 
 [![Check Report](https://github.com/cybertraining-dsc/fa20-523-313/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-313/actions)
 [![Status](https://github.com/cybertraining-dsc/fa20-523-313/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-313/actions)
@@ -12,7 +12,9 @@ Fauzan Isnaini, [fa20-523-313](https://github.com/cybertraining-dsc/fa20-523-313
 
 ## Abstract
 
-Predicting the stock market is a complex task with lots of different variables comes into play. While it is difficult to predict the short-term volatility, there are several approaches to forecast the stock market in the long term.  In this paper, we will analyze multiple methods to forecast the Indonesian Stock Exchange (IDX) recovery after the Covid-19 pandemic. The forecast will be based on technical analysis, fundamental analysis, and sentiment analysis.
+Predicting stock market has been an attractive field of research for a long time because it promises big wealth for anyone who can find the secret sauce. For a long time, traders around the world have been relying on technical analysis to analyze patterns in the stock price movement and predict the trend. With the advancement of big data, some financial institutions are beginning to predict the market by creating a model of the market using machine learning. While some researches produce promising results, most of them are directed on predicting the next day market behavior. In this study, we created an LSTM model to predict the market for multiple time steps. We then analyzed the performance of the model for different time period. From our observations, LSTM is good at predicting 5 time steps ahead, but the prediction became inaccurate as the time frame gets longer. 
+
+
 
 Contents
 
@@ -20,25 +22,34 @@ Contents
 
 {{% /pageinfo %}}
 
-**Keywords:** stock, market, predictive analytics, LSTM, random forest, regression, fundamental analysis, technical analysis, sentiment analysis, pandemic 
+**Keywords:** stock, market, predictive analytics, LSTM, random forest, regression, technical analysis 
 
 
 ## 1. Introduction
 
-The COVID-19 Pandemic is not just a crisis in the public health sector. It also impacts unemployment rates, business revenues, and mass psychology, which in the end lead to crashes in global stock markets. While some stock indexes like the Dow Jones Industrial Average (DJIA) and NASDAQ Composite have already recovered, the Indonesian Stock Market Index (IDX Composite) is still far below its price before the pandemic.
-Some of the possible causes are: 
+Predicting the stock market is a complex task with lots of different variables comes into play. As Giles [^1] explained, financial forecasting is an instance of signal processing problem which is difficult because of high noise, small sample size, non-stationary, and non-linearity. 
 
-1. Foreign investments represent about 50% of the total fund in the IDX stock exchange. In a pandemic situation, foreign investors might choose to withdraw their stocks and find another safer country to invest in.
-2. Unpredictability of the pandemic situation drives investors to reallocate their funds in safer assets, such as cash, gold, or USD.
-3. Changes in the macroeconomic situation, such as unemployment rate, Indonesian Rupiah (IDR) exchange rate, and interest rate. 
-4. Changes in the consumer buying power also change the business revenues, thus changing fundamental data.
-5. Mass psychology of investors that the stock market is not safe in this pandemic situation, holding them from returning to the stock market
+The noisy characteristics mean the incomplete information gap between past stock trading price and volume with a future price. The stock market is sensitive with the political and macroeconomic environment. However, these two kinds of information are too complex and unstable to gather. The above information that cannot be included in features are considered as noise. 
 
-To predict the time needed for IDX Composite to recover, two indicators can be utilized:
+The sample size of financial data is determined by the real world transaction records. On one hand, a larger sample size refers to a longer period of transaction records; on the other hand, large sample size increases the uncertainty of financial environment.
 
-1. Fundamental indicators, which represent the financial aspect. This can be in the form of macroeconomic data and a company financial report 
-2. Technical indicators, which represent the mass psychology of investors. This can be obtained from statistical analysis of how the stock market moves
-3. Sentiment analysis, which represents the mass psychology of Indonesian people. This can be obtained from Twitter and Google Trends
+By non-stationarity, one means that the distribution of stock data is various during time changing. Non-linearity implies that feature correlation of different individual stocks is various.
+
+Efficient Market Hypothesis was developed by Burton G. Malkiel in 1991. In Burton’s hypothesis, he indicates that predicting or forecasting the financial market is unrealistic, because price changes in the real world are unpredictable. All the changes in prices of the financial market are based on immediate economic events or news. Investors are profit-oriented, their buying or selling decisions are made according to most recent events regardless past analysis or plans. The argument about this Efficient Market Hypothesis has never been ended. So far, there is no strong proof that can verify if the efficient market hypothesis is proper or not.
+
+However, as Yaser claims, financial markets are predictable to a certain extent. The past experience of many price changes over a certain period of time in the financial market and the undiscounted serial correlations among vital economic events affecting the future financial market are two main pieces of evidence opposing the Efficient Market Hypothesis. 
+
+In recent years, machine learning methods have been extensively researched for their potentials in forecasting and prediction of the financial market. Multi-layer feed forward neural networks, SVM, reinforcement learning, relevance vector machines, and recurrent neural networks are the hottest topics of many approaches in financial market prediction field. Among all the machine learning methods, neural networks are well studied and have been successfully used for forecasting and modeling financial market. 
+
+“Unlike traditional machine learning models, the network learns from the examples by constructing an input-output mapping for the problem at hand. Such an approach brings to mind the study of  nonparametric statistical inference; the term “nonparametric” is used here to signify the fact that no prior assumptions are made on a statistical model for the input data”, according to Simon. 
+
+As Francis E.H. Tay and Lijuan Cao explained in their studies, Neural networks are more noise tolerant and more flexible compared with traditional statistical models. By noise tolerance, one means neural networks have the ability to be trained by incomplete and overlapped data. Flexibility refers to that neural networks have the capability to learn dynamic systems through a retraining process using new data patterns.
+
+Long short-term memory is a recurrent neural network introduced by Sepp Hochreite and Jurgen Schmidhuber in 1997. LSTM is designed to forecast, predict and classify time series data even long time lags between vital events happened before. LSTMs have been applied to solve several of problems; among those, handwriting Recognition and speech recognition made LSTM famous. 
+
+LSTM has advantages compared with traditional back-propagation neural networks and normal recurrent neural networks. The constant error back propagation inside memory blocks enables in LSTM ability to overcome long time lags in case of problems similar to those discussed above; LSTM can handle noise, distributed representations, and continuous values; LSTM requires no need for parameter fine-tuning, it works well over a broad range of parameters such as learning rate, input gate bias, and output gate bias.
+
+In this study, we created an LSTM model to predict the market for multiple time steps. We then analyzed the performance of the model for different time period.
 
 ## 2. Background Research and Previous Work
 
