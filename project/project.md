@@ -41,7 +41,7 @@ However, as Yaser claims, financial markets are predictable to a certain extent.
 
 In recent years, machine learning methods have been extensively researched for their potentials in forecasting and prediction of the financial market. Multi-layer feed forward neural networks, SVM, reinforcement learning, relevance vector machines, and recurrent neural networks are the hottest topics of many approaches in financial market prediction field. Among all the machine learning methods, neural networks are well studied and have been successfully used for forecasting and modeling financial market. 
 
-"Unlike traditional machine learning models, the network learns from the examples by constructing an input-output mapping for the problem at hand. Such an approach brings to mind the study of  nonparametric statistical inference; the term “nonparametric” is used here to signify the fact that no prior assumptions are made on a statistical model for the input data", according to Simon. 
+Unlike traditional machine learning models, the network learns from the examples by constructing an input-output mapping for the problem at hand. Such an approach brings to mind the study of  nonparametric statistical inference; the term nonparametric is used here to signify the fact that no prior assumptions are made on a statistical model for the input data. 
 
 As Francis E.H. Tay and Lijuan Cao explained in their studies, Neural networks are more noise tolerant and more flexible compared with traditional statistical models. By noise tolerance, one means neural networks have the ability to be trained by incomplete and overlapped data. Flexibility refers to that neural networks have the capability to learn dynamic systems through a retraining process using new data patterns.
 
