@@ -33,7 +33,7 @@ However, as Yaser [^3] claims, financial markets are predictable to a certain ex
 The most popular methods in predicting the stock markets are technical and fundamental analysis. Fundamental analysis is mainly based on three essential aspects [^4]: (i) macroeconomic analysis such as Gross Domestic Products and Consumer Price Index (CPI) which analyses the effect of the macroeconomic environment on the future profit of a company, (ii) industry analysis which estimates the value of the company based on industry status and prospect, and (iii) company analysis which analyses the current operation and financial status of a company to evaluate its internal value. 
 On the other hand, technical analysis is grouped into eight domains [^4]: sentiment, flow-of-funds, raw data, trend, momentum, volume, cycle, and volatility. Sentiment represents the behaviours of various market participants. Flow-of-funds is a type of indicator used to investigate the financial status of various investors to pre-evaluate their strength in terms of buying and selling stocks, then, corresponding strategies, such as short squeeze can be adopted. Raw data include stock price series and price patterns such as K-line diagrams and bar charts. Trend and momentum are examples of price-based indicators, trend is used for tracing the stock price trends while momentum is used to evaluate the velocity of the price change and judge whether a trend reversal in stock price is about to occur. Volume is an indicator that reflects the enthusiasm of both buyers and sellers for investing, it is also a basis for predicting stock price movements. The cycle is based on the theory that stock prices vary periodically in the form of a long cycle of more than 10 years containing short cycles of a few days or weeks. Finally, volatility is often used to investigate the fluctuation range of stock prices and to evaluate risk and identify the level of support and resistance.
 While those two are still the most popular approaches, the age of big data has brought a new method to predict the stock market: quantitative analysis. In this new method, stock market is captured into a mathematical model, and machine learning is used to predict its behavior. Research by Alzazah and Cheng [^5] analyzed more than 50 articles to compare various machine learning (ML) and deep learning (DL) methods used  to find which method could be more effective in prediction and for which types and amount of data. This research has proven that quantitative analysis with LSTM gives a promising result as the predictor of a stock market.
-In this study, we analyzed the performance of LSTM in predicting the stock market for multiple time frames. Despite the promising result in LSTM, most of the previous studies are conducted in building a model to predict the next day price. Thus, we wanted to know how accurate the LSTM model in predicting the stock market for a longer time frame (i.e. from daily to monthly time frame). We also chose to incorporate technical analysis rather than fundamental analysis in our model, because while fundamental analysis tends to be accurate in yearly period, it could not predict the fluctuation in the given time frame. 
+In this study, we analyzed the performance of LSTM in predicting the stock market for multiple time frames. LSTM model is used because it is designed to forecast, predict, and classify time series data [^2]. Despite the promising result in LSTM, most of the previous studies are conducted in building a model to predict the next day price. Thus, we wanted to know how accurate the LSTM model in predicting the stock market for a longer time frame (i.e. from daily to monthly time frame). We also chose to incorporate technical analysis rather than fundamental analysis in our model, because while fundamental analysis tends to be accurate in yearly period, it could not predict the fluctuation in the given time frame. 
 
 ## 2. Background Research and Previous Work
 
@@ -60,13 +60,26 @@ This project used the historical data of the Jakarta Composite Index (JKSE) from
 
 We also used MACD technical indicator as an input to our model. The MACD parameters are generated using the ta-lib library [^7] based on the Yahoo Finance data. Figure 3 and 4 provides a snapshot of the first few rows of the daily and monthly data respectively after incorporating the MACD technical indicator.
 
-The project is build on Python [^8], and Keras library [^9] is used to build the LSTM model. 
 
 ## 4. Methodology
 
-In this project, we build an LSTM model to predict the stock price in multiple time frames. We then analyze the performance of our model for each of the time frame. LSTM model is used because it is designed to forecast, predict, and classify time series data [^2].   
+### 4.1 Technology
 
+Python [^8] was the language of choice for this project. This was an easy decision for these reasons: 
 
+1. Python as a language has an enormous community behind it. Any problems that might be encountered can be easily solved with a trip to Stack Overflow. Python is among the most popular languages on the site which makes it very likely there will be a direct answer to any query.
+2. Python has an abundance of powerful tools ready for scientific computing. Packages such as Numpy, Pandas, and SciPy are freely available and well documented. Packages such as these can dramatically reduce, and simplify the code needed to write a given program. This makes iteration quick.
+3. Python as a language is forgiving and allows for programs that look like pseudo code. This is useful when pseudocode given in academic papers needs to be implemented and tested. Using Python, this step is usually reasonably trivial.
+
+In building the LSTM model, Keras [^9] library is used. It contains numerous implementations of commonly used neural network building blocks such as layers, objectives, activation functions, optimizers, and a host of tools to make working with image and text data easier. The code is hosted on GitHub, and community support forums include the GitHub issues page, a Gitter channel and a Slack channel.
+
+### 4.2 Data Preprocessing
+
+After downloading the historical datasets from Yahoo Finance, the MACD technical indicator is generated using the ta-lib library. Because MACD needs to capture data from previous time period, the MACD values on the first rows of the data are missing. These rows are then removed before being split into 8:2 proportion for training and testing purposes in the LSTM model.   
+
+### 4.3 The LSTM Model
+
+A multivariate LSTM model with two hidden layer is used, with dropout parameter of 0.2. Adam is used as the optimization algorithm.  The model uses 90 days time steps, which means it uses the past 60 days data to predict the output. It has 8 features, which are the Close, Low, High, Open, Volume, MACD, MACD Signal, and MACD Histogram. It then gives one output, which is the open price for the given time frame. We then analyze the performance of our model for each of the time frame. .  
 
 ## 5. Inference
 
