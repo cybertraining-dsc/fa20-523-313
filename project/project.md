@@ -63,11 +63,12 @@ During the pre-deep learning era, Financial Time Series modelling has mainly con
 
 This project used the historical data of the Jakarta Composite Index (JKSE) from Yahoo Finance [^6]. The JKSE is a national stock index of Indonesia, which consists of 700 companies. We choose to incorporate the composite index because it has a beta value of 1, which means it is less volatile than most individual stocks to be incorporated into a model. The dataset contains the Open, High, Low, Close, and Volume data for daily time period on the stock index. The daily data is taken from January 4th, 2000 until November 17th, 2020. We choose the daily data over the monthly data because it offer a more complete pattern. Figure 2 and 3 provides a snapshot of the first few rows of the daily and monthly data respectively.
 
-![Head of Daily Data](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/DailyHead.png)
+![Head of Daily Data](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/DailyHead.PNG)
+
 
 **Figure 2:** Snapshot of the first rows of the daily data
 
-![Head of Monthly Data](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/MonthlyHead.png)
+![Head of Monthly Data](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/MonthlyHead.PNG)
 
 **Figure 3:** Snapshot of the first rows of the monthly data
 
