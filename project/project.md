@@ -1,4 +1,4 @@
-# Analyzing LSTM Performance on Predicting Stock Market for Multiple Time Steps
+# Analyzing LSTM Performance on Predicting the Stock Market for Multiple Time Steps
 
 [![Check Report](https://github.com/cybertraining-dsc/fa20-523-313/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-313/actions)
 [![Status](https://github.com/cybertraining-dsc/fa20-523-313/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-313/actions)
@@ -12,7 +12,7 @@ Fauzan Isnaini, [fa20-523-313](https://github.com/cybertraining-dsc/fa20-523-313
 
 ## Abstract
 
-Predicting the stock market has been an attractive field of research for a long time because it promises big wealth for anyone who can find the secret. For a long time, traders around the world have been relying on fundamental analysis and technical analysis to predict the market. Now with the advancement of big data, some financial institutions are beginning to predict the market by creating a model of the market using machine learning. While some researches produce promising results, most of them are directed at predicting the next day's market behavior. In this study, we created an LSTM model to predict the market for multiple time frames. We then analyzed the performance of the model for some different time periods. From our observations, LSTM is good at predicting 10 time steps ahead, but the RMSE became larger as the time frame gets longer.
+Predicting the stock market has been an attractive field of research for a long time because it promises big wealth for anyone who can find the secret. For a long time, traders around the world have been relying on fundamental analysis and technical analysis to predict the market. Now with the advancement of big data, some financial institutions are beginning to predict the market by creating a model of the market using machine learning. While some researches produce promising results, most of them are directed at predicting the next day's market behavior. In this study, we created an LSTM model to predict the market for multiple time frames. We then analyzed the performance of the model for some different time periods. From our observations, LSTM is good at predicting 30 time steps ahead, but the RMSE became larger as the time frame gets longer.
 
 
 
@@ -72,7 +72,7 @@ The direction of the financial market is always stochastic and volatile and the 
 
 ## 3. Choice of Data-sets
 
-This project used the historical data of the Jakarta Composite Index (JKSE) from Yahoo Finance [^2]. The JKSE is a national stock index of Indonesia, which consists of 700 companies. We choose to incorporate the composite index because it has a beta value of 1, which means it is less volatile than most individual stocks to be incorporated into a model. The dataset contains the Open, High, Low, Close, and Volume data for daily time period on the stock index. The daily data is taken from January 1st, 2013 until November 17th, 2020. We choose the daily data over the monthly data because it offers a more complete pattern. Figure 2 and 3 provides a snapshot of the first few rows of the daily and monthly data respectively.
+This project used the historical data of the Jakarta Composite Index (JKSE) from Yahoo Finance [^2]. The JKSE is a national stock index of Indonesia, which consists of 700 companies. We choose to incorporate the composite index because it has a beta value of 1, which means it has neutral volatility compared to an individual stock to be incorporated into a model. The dataset contains the Open, High, Low, Close, and Volume data for daily time period on the stock index. The daily data is taken from January 1st, 2013 until November 17th, 2020. We choose the daily data over the monthly data because it offers a more complete pattern. Figure 2 and 3 provides a snapshot of the first few rows of the daily and monthly data respectively.
 
 ![Head of Daily Data](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/newdailyhead.png)
 
