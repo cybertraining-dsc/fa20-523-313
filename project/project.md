@@ -126,7 +126,7 @@ Figure 9 and Figure 10 compare the actual and predicted value for 1 day and 30 d
 
 ![Next Day Prediction](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/OneDayPredict.png)
 
-**Figure 9:** Next day prediction and actual values of the JKSE  
+**Figure 9:** Next day prediction and actual values of the JKSE
 
 ![30 Days Prediction](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/ThirtyDaysPredict.png)
 
@@ -154,10 +154,10 @@ The author would like to thank Dr. Geoffrey Fox, Dr. Gregor Von Laszewski, and t
 
 [^1]: A. Mostafa and Y. S., "Introduction to financial forecasting. Applied Intelligence," Applied Intelligence, 1996. 
 
-[^2]: "Composite Index (JKSE) Charts, Data &amp; News," Yahoo! Finance, 08-Dec-2020. [Online]. Available: https://finance.yahoo.com/quote/^JKSE/. [Accessed: 08-Dec-2020]. 
+[^2]: "Composite Index (JKSE) Charts, Data &amp; News," Yahoo! Finance, 08-Dec-2020. [Online]. Available: <https://finance.yahoo.com/quote/^JKSE/>. [Accessed: 08-Dec-2020]. 
 
 [^3]: D. Shah, H. Isah, and F. Zulkernine, "Stock Market Analysis: A Review and Taxonomy of Prediction Techniques," International Journal of Financial Studies, vol. 7, no. 2, p. 26, 2019. 
-[^4]: F. Isnaini, "cybertraining-dsc/fa20-523-313," GitHub, 08-Dec-2020. [Online]. Available: https://github.com/cybertraining-dsc/fa20-523-313/blob/main/project/code/multivariate.ipynb. [Accessed: 08-Dec-2020].
+[^4]: F. Isnaini, "cybertraining-dsc/fa20-523-313," GitHub, 08-Dec-2020. [Online]. Available: <https://github.com/cybertraining-dsc/fa20-523-313/blob/main/project/code/multivariate.ipynb>. [Accessed: 08-Dec-2020].
 
 [^5]: F. S. Alzazah and X. Cheng, "Recent Advances in Stock Market Prediction Using Text Mining: A Survey," E-Business [Working Title], 2020.
 
@@ -165,8 +165,8 @@ The author would like to thank Dr. Geoffrey Fox, Dr. Gregor Von Laszewski, and t
 
 [^6]: J. Wang and J. Kim, "Predicting Stock Price Trend Using MACD Optimized by Historical Volatility."
 
-[^7]: TA-Lib. [Online]. Available: https://mrjbq7.github.io/ta-lib/func_groups/momentum_indicators.html. [Accessed: 08-Dec-2020].
+[^7]: TA-Lib. [Online]. Available: <https://mrjbq7.github.io/ta-lib/func_groups/momentum_indicators.html>. [Accessed: 08-Dec-2020].
 
-[^8]: V. Bielinskas, “Multivariate Time Series Prediction with LSTM and Multiple features (Predict Google Stock Price),” Youtube, 2020. [Online]. Available: https://www.youtube.com/watch?v=gSYiKKoREFI. [Accessed: 08-Dec-2020].
+[^8]: V. Bielinskas, “Multivariate Time Series Prediction with LSTM and Multiple features (Predict Google Stock Price),” Youtube, 2020. [Online]. Available: <https://www.youtube.com/watch?v=gSYiKKoREFI>. [Accessed: 08-Dec-2020].
 
 [^9]: Y. Hu and X. Zhang, “Application of evolutionary computation for rule discovery in stock algorithmic trading,” Applied Soft Computing, 2015. 
