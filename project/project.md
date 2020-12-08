@@ -80,15 +80,25 @@ After downloading the historical datasets from Yahoo Finance, the MACD technical
 
 ### 4.3 The LSTM Model
 
-A multivariate LSTM model with two hidden layer is used, with dropout parameter of 0.2. Adam is used as the optimization algorithm.  The model uses 90 days time steps, which means it uses the past 60 days data to predict the output. It has 8 features, which are the Close, Low, High, Open, Volume, MACD, MACD Signal, and MACD Histogram. It then gives one output, which is the open price for the given time frame. We then analyze the performance of our model for each of the time frame.
+A multivariate LSTM model with two hidden layer is used, with dropout parameter of 0.2. Adam is used as the optimization algorithm.  The model uses 90 days time steps, which means it uses the past 90 days data to predict the output. It has 8 features, which are the Close, Low, High, Open, Volume, MACD, MACD Signal, and MACD Histogram. It then gives one output, which is the open price for the given time frame. We then analyze the performance of our model for each of the time frame.
 
-## 5. Inference
+## 5. Results
 
-This section will be addressed upon project completion.
+Figure 6 shows mean squared error (MSE) curve of the prediction in the training dataset for given epoch. It shows that the MSE converge at 30 epochs, with MSE of . 
 
-## 6. Conclusion
+We then use this number of epochs for different time frames. Figure 7 shows the root mean squared error (RMSE) in the training dataset for each time frame. It clearly shows that the RMSE become bigger on a longer time frame. It can still predict 5 days ahead with RMSE of , but the RMSE become when the model tries to predict 30 days ahead.
 
-This section will be addressed upon project completion.
+We then try this model on the testing data. Figure 8 shows the RMSE in the testing dataset for each time frame. As expected, the RMSE is still low when predicting 5 days ahead, but it becomes bigger when predicting on a longer time frames.
+
+Figure 9 and Figure 10 compare the actual and predicted value for 1 day and 30 days time frames respectively. It can be seen that the model cannot predict steep ramps in the price change, thus it is lagged from the actual price. The predicted price become furtherly lagged when predicting for a longer time frame, thus resulting in a bigger RMSE.
+
+We then use the monthly stock data, and observe whether this can give a better prediction than the daily data for the same time frame. Figure 11 compare the actual and predicted values for the monthly data. When using the monthly data, the RMSE is XX when predicting the next month's price. In fact, it still gives RMSE of XX when predicting the price for two months ahead.
+
+## 6. Conclusion and Future Works
+
+We have analyzed the performance of LSTM in predicting stock price for different time frames. While it gives a promising result in predicting the next day's price, the prediction becomes inaccurate for a longer time frame. This might be due to the non-stationarity nature of the stock market. The stock market trends can change abruptly because of a sudden change in the political and economic condition. Using the daily market data, our model gives promising results within 5 days time frame. For predicting the price beyond that, we find that using the monthly data gives a more accurate prediction than the daily data.
+This project has analysed the performance of LSTM using RMSE, but further research may measure the performance based on the potential financial gain. After all, stock market is a place to make money, thus financial gain is a better metrics of performance.
+Further improvement may also be done on our model. We only used price data and MACD technical indicator for the prediction. Further research may utilize other technical indicators, such as RSI and Stochastics to get a better prediction.
 
 ## 7. Acknowledgements
 
