@@ -41,6 +41,9 @@ In this study, we analyzed the performance of LSTM in predicting the stock marke
 
 MACD is an acronym for moving average convergence/divergence. It is a widely used technical indicator to confirm either bullish or bearish phase of the market. In essence, the MACD indicator shows the perceived strength of a downward or upward movement in price. Technically, it’s an oscillator, which is a term used for indicators that fluctuate between two extreme values, for example, from 0 to 100. 
 MACD evolved from the exponential moving average (EMA), which was proposed by Gerald Appel in the 1970s. The standard MACD is the 12-day EMA subtracted by the 26-day EMA, which is also called the DIF. The MACD histogram, which was developed by T. Aspray in 1986, measures the signed distance between the MACD and its signal line calculated using the 9-day EMA of the MACD, which is called the DEA. Similar to the MACD, the MACD histogram is an oscillator that fluctuates above and below the zero line. The construction formula of MACD is given on figure 1.
+![MACD Formula]
+(https://github.com/cybertraining-dsc/fa20-523-313/blob/main/project/images/MACDFormula.png)
+**Figure 1:** MACD formula
 
 The number of the MACD histogram is usually called the MACD bar or OSC. The analysis process of the cross and deviation strategy of DIF and DEA includes the following three steps: (i) Calculate the values of DIF and DEA, (ii)When DIF and DEA are positive, the MACD line cuts the signal line in the uptrend, and the divergence is positive, there is a buy signal confirmation, and (iii)When DIF and DEA are negative, the signal line cuts the MACD line in the downtrend, and the divergence is negative, there is a sell signal confirmation.
 
@@ -57,7 +60,14 @@ During the pre-deep learning era, Financial Time Series modelling has mainly con
 
 ## 3. Choice of Data-sets
 
-This project used the historical data of the Jakarta Composite Index (JKSE) from Yahoo Finance [^6]. The JKSE is a national stock index of Indonesia, which consists of 700 companies. We choose to incorporate the composite index because it has a beta value of 1, which means it is less volatile than most individual stocks to be incorporated into a model. The dataset contains the Open, High, Low, Close, and Volume data for both daily and monthly time period on the stock index from January 4th, 2000 until November 17th, 2020. These datasets are split into two csv files: the daily data and the monthly data. Figure 1 and 2 provides a snapshot of the first few rows of the daily and monthly data respectively.
+This project used the historical data of the Jakarta Composite Index (JKSE) from Yahoo Finance [^6]. The JKSE is a national stock index of Indonesia, which consists of 700 companies. We choose to incorporate the composite index because it has a beta value of 1, which means it is less volatile than most individual stocks to be incorporated into a model. The dataset contains the Open, High, Low, Close, and Volume data for both daily and monthly time period on the stock index. The daily data is taken from January 4th, 2000 until November 17th, 2020, while the monthly data is taken from a longer period from January 1st, 1995 to give sufficient data. Figure 2 and 3 provides a snapshot of the first few rows of the daily and monthly data respectively.
+![Head of Daily Data]
+(https://github.com/cybertraining-dsc/fa20-523-313/blob/main/project/images/DailyHead.PNG)
+**Figure 2:** Snapshot of the first rows of the daily data
+
+![Head of Monthly Data]
+(https://github.com/cybertraining-dsc/fa20-523-313/blob/main/project/images/MonthlyHead.PNG)
+**Figure 3:** Snapshot of the first rows of the monthly data
 
 We also used MACD technical indicator as an input to our model. The MACD parameters are generated using the ta-lib library [^7] based on the Yahoo Finance data. Figure 3 and 4 provides a snapshot of the first few rows of the daily and monthly data respectively after incorporating the MACD technical indicator.
 
