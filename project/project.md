@@ -42,8 +42,10 @@ In this study, we analyzed the performance of LSTM in predicting the stock marke
 MACD is an acronym for moving average convergence/divergence. It is a widely used technical indicator to confirm either bullish or bearish phase of the market. In essence, the MACD indicator shows the perceived strength of a downward or upward movement in price. Technically, it’s an oscillator, which is a term used for indicators that fluctuate between two extreme values, for example, from 0 to 100. 
 MACD evolved from the exponential moving average (EMA), which was proposed by Gerald Appel in the 1970s. The standard MACD is the 12-day EMA subtracted by the 26-day EMA, which is also called the DIF. The MACD histogram, which was developed by T. Aspray in 1986, measures the signed distance between the MACD and its signal line calculated using the 9-day EMA of the MACD, which is called the DEA. Similar to the MACD, the MACD histogram is an oscillator that fluctuates above and below the zero line. The construction formula of MACD is given on figure 1.
 
+![Figure 1](https://github.com/cybertraining-dsc/fa20-523-314/raw/main/project/images/chart.png)
+
 ![MACD Formula]
-(https://github.com/cybertraining-dsc/fa20-523-313/blob/main/project/images/MACDFormula.png)
+(https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/MACDFormula.png)
 
 **Figure 1:** MACD formula
 
