@@ -61,7 +61,7 @@ During the pre-deep learning era, Financial Time Series modelling has mainly con
 
 ## 3. Choice of Data-sets
 
-This project used the historical data of the Jakarta Composite Index (JKSE) from Yahoo Finance [^6]. The JKSE is a national stock index of Indonesia, which consists of 700 companies. We choose to incorporate the composite index because it has a beta value of 1, which means it is less volatile than most individual stocks to be incorporated into a model. The dataset contains the Open, High, Low, Close, and Volume data for both daily and monthly time period on the stock index. The daily data is taken from January 4th, 2000 until November 17th, 2020, while the monthly data is taken from a longer period from January 1st, 1995 to give sufficient data. Figure 2 and 3 provides a snapshot of the first few rows of the daily and monthly data respectively.
+This project used the historical data of the Jakarta Composite Index (JKSE) from Yahoo Finance [^6]. The JKSE is a national stock index of Indonesia, which consists of 700 companies. We choose to incorporate the composite index because it has a beta value of 1, which means it is less volatile than most individual stocks to be incorporated into a model. The dataset contains the Open, High, Low, Close, and Volume data for daily time period on the stock index. The daily data is taken from January 4th, 2000 until November 17th, 2020. We choose the daily data over the monthly data because it offer a more complete pattern. Figure 2 and 3 provides a snapshot of the first few rows of the daily and monthly data respectively.
 
 ![Head of Daily Data](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/DailyHead.png)
 
@@ -85,7 +85,7 @@ We also used MACD technical indicator as an input to our model. The MACD paramet
 
 ### 4.1 Technology
 
-Python [^8] was the language of choice for this project. This was an easy decision for these reasons: 
+Python [^8] was the language of choice for this project. This was an easy decision for these reasons [^9]: 
 
 1. Python as a language has an enormous community behind it. Any problems that might be encountered can be easily solved with a trip to Stack Overflow. Python is among the most popular languages on the site which makes it very likely there will be a direct answer to any query.
 2. Python has an abundance of powerful tools ready for scientific computing. Packages such as Numpy, Pandas, and SciPy are freely available and well documented. Packages such as these can dramatically reduce, and simplify the code needed to write a given program. This makes iteration quick.
@@ -109,40 +109,26 @@ Figure 6 shows mean squared error (MSE) curve of the prediction in the training 
 
 **Figure 6:** MSE on the training data for each given epoch 
 
-We then use this number of epochs for different time frames. Figure 7 shows the root mean squared error (RMSE) in the training dataset for each time frame. It clearly shows that the RMSE become bigger on a longer time frame. When predicting the next day period, the RMSE is 237.28, while when predicting 30 days ahead, the RMSE doubles to 583.09. But overall, these values are still acceptable because they are smaller than the standar deviation of the actual dataset of 735.96.
+We then use this number of epochs for different time frames. Figure 7 shows the root mean squared error (RMSE) in the training dataset for each time frame. It clearly shows that the RMSE become bigger on a longer time frame. When predicting the next day period, the RMSE is 237.28, while when predicting 10 days ahead, the RMSE doubles to 464.87. But overall, these values are still acceptable because they are smaller than the standar deviation of the actual dataset of 735.96.
 
 ![RMSE](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/RMSEonTimeFrame.png)
 
 **Figure 7:** RMSE on the training data for each time frame 
 
-We then try this model on the testing data. Figure 8 shows the RMSE in the testing dataset for each time frame. As expected, the RMSE is still low when predicting 5 days ahead, but it becomes bigger when predicting on a longer time frames.
-
-  ![Epoch Loss](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/LossEpochs.png)
-
-**Figure 8:** RMSE on the testing data for each time frame 
-
-
-Figure 9 and Figure 10 compare the actual and predicted value for 1 day and 30 days time frames respectively. It can be seen that the model cannot predict steep ramps in the price change, thus it is lagged from the actual price. The predicted price become furtherly lagged when predicting for a longer time frame, thus resulting in a bigger RMSE.
+Figure 8 and Figure 9 compare the actual and predicted value for 1 day and 30 days time frames respectively. It can be seen that the model cannot predict steep ramps in the price change, thus it is lagged from the actual price. The predicted price become furtherly lagged when predicting for a longer time frame, thus resulting in a bigger RMSE.
 
 ![Next Day Prediction](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/OneDayPredict.png)
 
-**Figure 9:** Next day prediction and actual values of the JKSE
+**Figure 8:** Next day prediction and actual values of the JKSE
 
 ![30 Days Prediction](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/ThirtyDaysPredict.png)
 
-**Figure 10:** Prediction of 30 days time frame and actual values of the JKSE 
-
-
-We then use the monthly stock data, and observe whether this can give a better prediction than the daily data for the same time frame. Figure 11 compare the actual and predicted values for the monthly data. When using the monthly data, the RMSE is XX when predicting the next month's price. In fact, it still gives RMSE of XX when predicting the price for two months ahead.
-
-![Monthly Prediction](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/LossEpochs.png)
-
-**Figure 11:** Next month prediction and actual values of the JKSE using monthly data
+**Figure 9:** Prediction of 30 days time frame and actual values of the JKSE 
 
 
 ## 6. Conclusion and Future Works
 
-We have analyzed the performance of LSTM in predicting stock price for different time frames. While it gives a promising result in predicting the next day's price, the prediction becomes inaccurate for a longer time frame. This might be due to the non-stationarity nature of the stock market. The stock market trends can change abruptly because of a sudden change in the political and economic condition. Using the daily market data, our model gives promising results within 5 days time frame. For predicting the price beyond that, we find that using the monthly data gives a more accurate prediction than the daily data.
+We have analyzed the performance of LSTM in predicting stock price for different time frames. While it gives a promising result in predicting the next day's price, the prediction becomes less accurate for a longer time frame. This might be due to the non-stationarity nature of the stock market. The stock market trends can change abruptly because of a sudden change in the political and economic condition. Using the daily market data, our model gives promising results within 10 days time frame.
 This project has analysed the performance of LSTM using RMSE, but further research may measure the performance based on the potential financial gain. After all, stock market is a place to make money, thus financial gain is a better metrics of performance.
 Further improvement may also be done on our model. We only used price data and MACD technical indicator for the prediction. Further research may utilize other technical indicators, such as RSI and Stochastics to get a better prediction.
 
