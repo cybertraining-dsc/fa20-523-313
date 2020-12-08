@@ -127,7 +127,7 @@ Figure 7 shows the root mean squared error (RMSE) on the testing dataset for eac
 
 **Figure 7:** RMSE on the training data for each time frame 
 
-Figure 8 and Figure 9 compare the predicted values on the training data for 1 day and 30 days time frames respectively, while Figure 10 and 11 give the comparison on the test data. It can be seen that the model cannot predict steep ramps in the price change, thus it is lagged from the actual price. The predicted price becomes further lagged when predicting for a longer time frame, thus resulting in a bigger RMSE.  
+Figure 8 and Figure 9 compare the predicted values on the training data for 1 day and 30 days time frames respectively, while Figure 10 and 11 give the comparison on the test data. It can be seen that the model cannot predict steep ramps in the price change, thus it is lagged from the actual price. The predicted price becomes further lagged when predicting for a longer time frame, thus resulting in a bigger RMSE.
 
 ![Next Day Prediction](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/newOneDayPredict.png)
 
@@ -145,11 +145,12 @@ Figure 8 and Figure 9 compare the predicted values on the training data for 1 da
 
 **Figure 11:** Comparison between the 30 days time frame prediction and its actual values based on the testing data
 
-We also found that a longer training dataset does not always give a better prediction, because the model might overfit with the training data. In fact, when we used historical market data from January 2000, the RMSE became close to 3,000. This might be due to in overall the stock markets tend to always get higher every year. When the data is too old, the model needs to compensate from the time when the price is still very low.
+We also found that a longer training dataset does not always give a better prediction because the model might overfit with the training data. In fact, when we used historical market data from January 2000, the RMSE became close to 3,000. This might be due to overall the stock market tends to always get higher every year. When the data is too old, the model needs to compensate for the time when the price is still very low.
 
 We also capture the time needed to run each critical process using cloudmesh-common benchmark and stopwatch framework [^6]. The stopwatch recordings are shown in Table 1. The table shows that training the model took the longest time. It also highlights the system's specification used in running the program.
 
 **Table 1:** Benchmark results
+
 +---------------------+------------------------------------------------------------------+
 | Attribute           | Value                                                            |
 |---------------------+------------------------------------------------------------------|
