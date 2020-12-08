@@ -72,7 +72,7 @@ The direction of the financial market is always stochastic and volatile and the 
 
 ## 3. Choice of Data-sets
 
-This project used the historical data of the Jakarta Composite Index (JKSE) from Yahoo Finance [^2]. The JKSE is a national stock index of Indonesia, which consists of 700 companies. We choose to incorporate the composite index because it has a beta value of 1, which means it is less volatile than most individual stocks to be incorporated into a model. The dataset contains the Open, High, Low, Close, and Volume data for daily time period on the stock index. The daily data is taken from January 4th, 2000 until November 17th, 2020. We choose the daily data over the monthly data because it offers a more complete pattern. Figure 2 and 3 provides a snapshot of the first few rows of the daily and monthly data respectively.
+This project used the historical data of the Jakarta Composite Index (JKSE) from Yahoo Finance [^2]. The JKSE is a national stock index of Indonesia, which consists of 700 companies. We choose to incorporate the composite index because it has a beta value of 1, which means it is less volatile than most individual stocks to be incorporated into a model. The dataset contains the Open, High, Low, Close, and Volume data for daily time period on the stock index. The daily data is taken from January 1st, 2013 until November 17th, 2020. We choose the daily data over the monthly data because it offers a more complete pattern. Figure 2 and 3 provides a snapshot of the first few rows of the daily and monthly data respectively.
 
 ![Head of Daily Data](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/newdailyhead.png)
 
@@ -97,7 +97,7 @@ We also used the MACD technical indicator as an input to our model. The MACD par
 
 ### 4.1 Technology
 
-Python [^4] was the language of choice for this project. This was an easy decision for these reasons [^9]: 
+Python [^4] was the language of choice for this project. This was an easy decision for these reasons [^7]: 
 
 1. Python as a language has an enormous community behind it. Any problems that might be encountered can be easily solved with a trip to Stack Overflow. Python is among the most popular languages on the site which makes it very likely there will be a direct answer to any query.
 2. Python has an abundance of powerful tools ready for scientific computing. Packages such as Numpy, Pandas, and SciPy are freely available and well documented. Packages such as these can dramatically reduce, and simplify the code needed to write a given program. This makes iteration quick.
@@ -115,32 +115,98 @@ A multivariate LSTM model with two hidden layers is used, with a dropout paramet
 
 ## 5. Results
 
-Figure 6 shows the mean squared error (MSE) curve of the prediction in the training dataset for each given epoch. It shows that the MSE converges after 20 epochs, with a value of 0.0243.
+We used callback function to find the best number of epochs in the model. Figure 6 gives the mean squared error (MSE) curve of the prediction in the training dataset for each given epoch. It shows that the MSE converges after 20 epochs, with a value of 0.0243.
 
 ![Epoch Loss](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/newlossepochs.png)
 
 **Figure 6:** MSE on the training data for each given epoch 
 
-We then use this number of epochs for different time frames. Figure 7 shows the root mean squared error (RMSE) in the training dataset for each time frame. It clearly shows that the RMSE becomes bigger on a longer time frame. When predicting the next day period, the RMSE is 237.28, while when predicting 10 days ahead, the RMSE doubles to 464.87. But overall, these values are still acceptable because they are smaller than the standard deviation of the actual dataset of 735.96.
+Figure 7 shows the root mean squared error (RMSE) on the testing dataset for each time frame. It clearly shows that the RMSE becomes bigger on a longer time frame. When predicting the next day period, the RMSE is 323.41, while when predicting 30 days ahead, the RMSE increase to 481.32. But overall, these values are still acceptable because they are smaller than the standard deviation of the actual dataset of 667.31.
 
-![RMSE](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/newRMSEonTimeFrame.png)
+![RMSE](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/RMSEonTimeFrame.png)
 
 **Figure 7:** RMSE on the training data for each time frame 
 
-Figure 8 and Figure 9 compare the actual and predicted value for 1 day and 30 days time frames respectively. It can be seen that the model cannot predict steep ramps in the price change, thus it is lagged from the actual price. The predicted price becomes further lagged when predicting for a longer time frame, thus resulting in a bigger RMSE.
+Figure 8 and Figure 9 compare the predicted values on the training data for 1 day and 30 days time frames respectively, while Figure 10 and 11 give the comparison on the test data. It can be seen that the model cannot predict steep ramps in the price change, thus it is lagged from the actual price. The predicted price becomes further lagged when predicting for a longer time frame, thus resulting in a bigger RMSE.  
 
 ![Next Day Prediction](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/newOneDayPredict.png)
 
-**Figure 8:** Next day prediction and actual values of the JKSE
+**Figure 8:** Comparison between the next day prediction and its actual values based on the training data
 
 ![30 Days Prediction](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/newThirtyDaysPredict.png)
 
-**Figure 9:** Prediction of 30 days time frame and actual values of the JKSE 
+**Figure 9:** Comparison between the 30 days time frame prediction and its actual values based on the training data
+
+![Next Day Test](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/newonedaytest.png)
+
+**Figure 10:** Comparison between the next day prediction and its actual values based on the testing data
+
+![30 Days Test](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/thirtydaystest.png)
+
+**Figure 11:** Comparison between the 30 days time frame prediction and its actual values based on the testing data
+
+We also found that a longer training dataset does not always give a better prediction, because the model might overfit with the training data. In fact, when we used historical market data from January 2000, the RMSE became close to 3,000. This might be due to in overall the stock markets tend to always get higher every year. When the data is too old, the model needs to compensate from the time when the price is still very low.
+
+We also capture the time needed to run each critical process using cloudmesh-common benchmark and stopwatch framework [^6]. The stopwatch recordings are shown in Table 1. The table shows that training the model took the longest time. It also highlights the system's specification used in running the program.
+
+**Table 1:** Benchmark results
++---------------------+------------------------------------------------------------------+
+| Attribute           | Value                                                            |
+|---------------------+------------------------------------------------------------------|
+| BUG_REPORT_URL      | "https://bugs.launchpad.net/ubuntu/"                             |
+| DISTRIB_CODENAME    | bionic                                                           |
+| DISTRIB_DESCRIPTION | "Ubuntu 18.04.5 LTS"                                             |
+| DISTRIB_ID          | Ubuntu                                                           |
+| DISTRIB_RELEASE     | 18.04                                                            |
+| HOME_URL            | "https://www.ubuntu.com/"                                        |
+| ID                  | ubuntu                                                           |
+| ID_LIKE             | debian                                                           |
+| NAME                | "Ubuntu"                                                         |
+| PRETTY_NAME         | "Ubuntu 18.04.5 LTS"                                             |
+| PRIVACY_POLICY_URL  | "https://www.ubuntu.com/legal/terms-and-policies/privacy-policy" |
+| SUPPORT_URL         | "https://help.ubuntu.com/"                                       |
+| UBUNTU_CODENAME     | bionic                                                           |
+| VERSION             | "18.04.5 LTS (Bionic Beaver)"                                    |
+| VERSION_CODENAME    | bionic                                                           |
+| VERSION_ID          | "18.04"                                                          |
+| cpu_count           | 2                                                                |
+| mem.active          | 1.1 GiB                                                          |
+| mem.available       | 11.7 GiB                                                         |
+| mem.free            | 9.3 GiB                                                          |
+| mem.inactive        | 2.1 GiB                                                          |
+| mem.percent         | 7.6 %                                                            |
+| mem.total           | 12.7 GiB                                                         |
+| mem.used            | 1.1 GiB                                                          |
+| platform.version    | #1 SMP Thu Jul 23 08:00:38 PDT 2020                              |
+| python              | 3.6.9 (default, Oct  8 2020, 12:12:24)                           |
+|                     | [GCC 8.4.0]                                                      |
+| python.pip          | 19.3.1                                                           |
+| python.version      | 3.6.9                                                            |
+| sys.platform        | linux                                                            |
+| uname.machine       | x86_64                                                           |
+| uname.node          | a056fad1a2f7                                                     |
+| uname.processor     | x86_64                                                           |
+| uname.release       | 4.19.112+                                                        |
+| uname.system        | Linux                                                            |
+| uname.version       | #1 SMP Thu Jul 23 08:00:38 PDT 2020                              |
+| user                | collab                                                           |
++---------------------+------------------------------------------------------------------+
+
++----------------------------------+----------+--------+--------+---------------------+-------+--------------+--------+-------+-------------------------------------+
+| Name                             | Status   |   Time |    Sum | Start               | tag   | Node         | User   | OS    | Version                             |
+|----------------------------------+----------+--------+--------+---------------------+-------+--------------+--------+-------+-------------------------------------|
+| importdata                       | ok       |  0.236 |  0.236 | 2020-12-08 13:26:50 |       | a056fad1a2f7 | collab | Linux | #1 SMP Thu Jul 23 08:00:38 PDT 2020 |
+| import data                      | ok       |  0.328 |  0.693 | 2020-12-08 15:57:15 |       | a056fad1a2f7 | collab | Linux | #1 SMP Thu Jul 23 08:00:38 PDT 2020 |
+| Creating the train and test data | ok       |  0.012 |  0.036 | 2020-12-08 15:58:08 |       | a056fad1a2f7 | collab | Linux | #1 SMP Thu Jul 23 08:00:38 PDT 2020 |
+| Train the model                  | ok       | 25.163 | 46.741 | 2020-12-08 15:58:22 |       | a056fad1a2f7 | collab | Linux | #1 SMP Thu Jul 23 08:00:38 PDT 2020 |
+| Predict data                     | ok       |  2.086 |  3.857 | 2020-12-08 16:00:09 |       | a056fad1a2f7 | collab | Linux | #1 SMP Thu Jul 23 08:00:38 PDT 2020 |
++----------------------------------+----------+--------+--------+---------------------+-------+--------------+--------+-------+-------------------------------------+
+
 
 
 ## 6. Conclusion and Future Works
 
-We have analyzed the performance of LSTM in predicting the stock price for different time frames. While it gives a promising result in predicting the next day's price, the prediction becomes less accurate for a longer time frame. This might be due to the non-stationarity nature of the stock market. The stock market trends can change abruptly because of a sudden change in the political and economic conditions. Using the daily market data, our model gives promising results within 10 days time frame.
+We have analyzed the performance of LSTM in predicting the stock price for different time frames. While it gives a promising result in predicting the next day's price, the prediction becomes less accurate for a longer time frame. This might be due to the non-stationarity nature of the stock market. The stock market trends can change abruptly because of a sudden change in the political and economic conditions. Using the daily market data, our model gives promising results within 30 days time frame.
 This project has analyzed the performance of LSTM using RMSE, but further research may measure the performance based on the potential financial gain. After all, the stock market is a place to make money, thus financial gain is a better metric of performance.
 Further improvement may also be done on our model. We only used price data and MACD technical indicator for the prediction. Further research may utilize other technical indicators, such as RSI and Stochastics to get a better prediction.
 
@@ -155,20 +221,23 @@ The author would like to thank Dr. Geoffrey Fox, Dr. Gregor Von Laszewski, and t
 [^2]: "Composite Index (JKSE) Charts, Data &amp; News," Yahoo! Finance, 08-Dec-2020. [Online]. Available: <https://finance.yahoo.com/quote/^JKSE/>. [Accessed: 08-Dec-2020]. 
 
 [^3]: D. Shah, H. Isah, and F. Zulkernine, "Stock Market Analysis: A Review and Taxonomy of Prediction Techniques," International Journal of Financial Studies, vol. 7, no. 2, p. 26, 2019. 
+
 [^4]: F. Isnaini, "cybertraining-dsc/fa20-523-313," GitHub, 08-Dec-2020. [Online]. Available: <https://github.com/cybertraining-dsc/fa20-523-313/blob/main/project/code/multivariate.ipynb>. [Accessed: 08-Dec-2020].
 
 [^5]: F. S. Alzazah and X. Cheng, "Recent Advances in Stock Market Prediction Using Text Mining: A Survey," E-Business [Working Title], 2020.
 
-[^5]: J. Bosco and F. Khan, Stock Market Prediction and Efficiency Analysis using Recurrent Neural Network. Berlin, Germany: 2018, 2018.
+[^6]: G. Von Laszewski, "cloudmesh/cloudmesh-common," GitHub, 2020. [Online]. Available: <https://github.com/cloudmesh/cloudmesh-common>. [Accessed: 08-Dec-2020]. 
 
-[^6]: J. Wang and J. Kim, "Predicting Stock Price Trend Using MACD Optimized by Historical Volatility."
+[^7]: J. Bosco and F. Khan, Stock Market Prediction and Efficiency Analysis using Recurrent Neural Network. Berlin, Germany: 2018, 2018.
 
-[^7]: TA-Lib. [Online]. Available: <https://mrjbq7.github.io/ta-lib/func_groups/momentum_indicators.html>. [Accessed: 08-Dec-2020].
+[^8]: J. Wang and J. Kim, "Predicting Stock Price Trend Using MACD Optimized by Historical Volatility."
 
-[^8]: S. Siami-Namini, N. Tavakoli, and A. S. Namin, "A Comparison of ARIMA and LSTM in Forecasting Time Series," 2018 17th IEEE International Conference on Machine Learning and Applications (ICMLA), 2018. 
+[^9]: TA-Lib. [Online]. Available: <https://mrjbq7.github.io/ta-lib/func_groups/momentum_indicators.html>. [Accessed: 08-Dec-2020].
 
-[^9]: V. Bielinskas, "Multivariate Time Series Prediction with LSTM and Multiple features (Predict Google Stock Price)," Youtube, 2020. [Online]. Available: <https://www.youtube.com/watch?v=gSYiKKoREFI>. [Accessed: 08-Dec-2020].
+[^10]: S. Siami-Namini, N. Tavakoli, and A. S. Namin, "A Comparison of ARIMA and LSTM in Forecasting Time Series," 2018 17th IEEE International Conference on Machine Learning and Applications (ICMLA), 2018. 
 
-[^10]: Y. Hu and X. Zhang, "Application of evolutionary computation for rule discovery in stock algorithmic trading," Applied Soft Computing, 2015.
+[^11]: V. Bielinskas, "Multivariate Time Series Prediction with LSTM and Multiple features (Predict Google Stock Price)," Youtube, 2020. [Online]. Available: <https://www.youtube.com/watch?v=gSYiKKoREFI>. [Accessed: 08-Dec-2020].
 
-[^11]: Z. Zhou, "Using LSTM in Stock prediction and Quantitative Trading," CS230, 2020.
+[^12]: Y. Hu and X. Zhang, "Application of evolutionary computation for rule discovery in stock algorithmic trading," Applied Soft Computing, 2015.
+
+[^13]: Z. Zhou, "Using LSTM in Stock prediction and Quantitative Trading," CS230, 2020.
