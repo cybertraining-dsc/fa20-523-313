@@ -68,7 +68,7 @@ This project used the historical data of the Jakarta Composite Index (JKSE) from
 
 **Figure 2:** Snapshot of the first rows of the daily data
 
-![Head of Monthly Data](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/MonthlyHead.PNG)
+![Head of Monthly Data](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/newMonthlyHead.PNG)
 
 **Figure 3:** Snapshot of the first rows of the monthly data
 
@@ -78,7 +78,7 @@ We also used MACD technical indicator as an input to our model. The MACD paramet
 
 **Figure 4:** MACD on the daily data
 
-![Monthly MACD](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/MACDonMonthly.PNG)
+![Monthly MACD](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/newMACDonMonthly.png)
 
 **Figure 5:** MACD on the monthly data
 
@@ -106,23 +106,23 @@ A multivariate LSTM model with two hidden layer is used, with dropout parameter 
 
 Figure 6 shows mean squared error (MSE) curve of the prediction in the training dataset for each given epoch. It shows that the MSE converge after 20 epochs, with the value of 0.0243.
 
-![Epoch Loss](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/LossEpochs.png)
+![Epoch Loss](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/newlossepochs.png)
 
 **Figure 6:** MSE on the training data for each given epoch 
 
 We then use this number of epochs for different time frames. Figure 7 shows the root mean squared error (RMSE) in the training dataset for each time frame. It clearly shows that the RMSE become bigger on a longer time frame. When predicting the next day period, the RMSE is 237.28, while when predicting 10 days ahead, the RMSE doubles to 464.87. But overall, these values are still acceptable because they are smaller than the standar deviation of the actual dataset of 735.96.
 
-![RMSE](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/RMSEonTimeFrame.png)
+![RMSE](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/newRMSEonTimeFrame.png)
 
 **Figure 7:** RMSE on the training data for each time frame 
 
 Figure 8 and Figure 9 compare the actual and predicted value for 1 day and 30 days time frames respectively. It can be seen that the model cannot predict steep ramps in the price change, thus it is lagged from the actual price. The predicted price become furtherly lagged when predicting for a longer time frame, thus resulting in a bigger RMSE.
 
-![Next Day Prediction](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/OneDayPredict.png)
+![Next Day Prediction](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/newOneDayPredict.png)
 
 **Figure 8:** Next day prediction and actual values of the JKSE
 
-![30 Days Prediction](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/ThirtyDaysPredict.png)
+![30 Days Prediction](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/newThirtyDaysPredict.png)
 
 **Figure 9:** Prediction of 30 days time frame and actual values of the JKSE 
 
