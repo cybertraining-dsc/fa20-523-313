@@ -38,6 +38,7 @@ In this study, we analyzed the performance of LSTM in predicting the stock marke
 ## 2. Background Research and Previous Work
 
 ### 2.1 MACD in Technical Analysis
+
 MACD is an acronym for moving average convergence/divergence. It is a widely used technical indicator to confirm either bullish or bearish phase of the market. In essence, the MACD indicator shows the perceived strength of a downward or upward movement in price. Technically, it’s an oscillator, which is a term used for indicators that fluctuate between two extreme values, for example, from 0 to 100. 
 MACD evolved from the exponential moving average (EMA), which was proposed by Gerald Appel in the 1970s. The standard MACD is the 12-day EMA subtracted by the 26-day EMA, which is also called the DIF. The MACD histogram, which was developed by T. Aspray in 1986, measures the signed distance between the MACD and its signal line calculated using the 9-day EMA of the MACD, which is called the DEA. Similar to the MACD, the MACD histogram is an oscillator that fluctuates above and below the zero line. The construction formula of MACD is given on figure 1.
 
@@ -75,11 +76,11 @@ In building the LSTM model, Keras [^9] library is used. It contains numerous imp
 
 ### 4.2 Data Preprocessing
 
-After downloading the historical datasets from Yahoo Finance, the MACD technical indicator is generated using the ta-lib library. Because MACD needs to capture data from previous time period, the MACD values on the first rows of the data are missing. These rows are then removed before being split into 8:2 proportion for training and testing purposes in the LSTM model.   
+After downloading the historical datasets from Yahoo Finance, the MACD technical indicator is generated using the ta-lib library. Because MACD needs to capture data from previous time period, the MACD values on the first rows of the data are missing. These rows are then removed before being split into 8:2 proportion for training and testing purposes in the LSTM model.
 
 ### 4.3 The LSTM Model
 
-A multivariate LSTM model with two hidden layer is used, with dropout parameter of 0.2. Adam is used as the optimization algorithm.  The model uses 90 days time steps, which means it uses the past 60 days data to predict the output. It has 8 features, which are the Close, Low, High, Open, Volume, MACD, MACD Signal, and MACD Histogram. It then gives one output, which is the open price for the given time frame. We then analyze the performance of our model for each of the time frame. .  
+A multivariate LSTM model with two hidden layer is used, with dropout parameter of 0.2. Adam is used as the optimization algorithm.  The model uses 90 days time steps, which means it uses the past 60 days data to predict the output. It has 8 features, which are the Close, Low, High, Open, Volume, MACD, MACD Signal, and MACD Histogram. It then gives one output, which is the open price for the given time frame. We then analyze the performance of our model for each of the time frame.
 
 ## 5. Inference
 
