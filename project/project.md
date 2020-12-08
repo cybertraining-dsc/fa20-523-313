@@ -67,7 +67,7 @@ This project used the historical data of the Jakarta Composite Index (JKSE) from
 
 **Figure 2:** Snapshot of the first rows of the daily data
 
-![Head of Daily Data](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/MonthlyHead.png)
+![Head of Monthly Data](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/MonthlyHead.png)
 
 **Figure 3:** Snapshot of the first rows of the monthly data
 
