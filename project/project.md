@@ -151,59 +151,9 @@ We also capture the time needed to run each critical process using cloudmesh-com
 
 **Table 1:** Benchmark results
 
-+---------------------+------------------------------------------------------------------+
-| Attribute           | Value                                                            |
-|---------------------+------------------------------------------------------------------|
-| BUG_REPORT_URL      | "https://bugs.launchpad.net/ubuntu/"                             |
-| DISTRIB_CODENAME    | bionic                                                           |
-| DISTRIB_DESCRIPTION | "Ubuntu 18.04.5 LTS"                                             |
-| DISTRIB_ID          | Ubuntu                                                           |
-| DISTRIB_RELEASE     | 18.04                                                            |
-| HOME_URL            | "https://www.ubuntu.com/"                                        |
-| ID                  | ubuntu                                                           |
-| ID_LIKE             | debian                                                           |
-| NAME                | "Ubuntu"                                                         |
-| PRETTY_NAME         | "Ubuntu 18.04.5 LTS"                                             |
-| PRIVACY_POLICY_URL  | "https://www.ubuntu.com/legal/terms-and-policies/privacy-policy" |
-| SUPPORT_URL         | "https://help.ubuntu.com/"                                       |
-| UBUNTU_CODENAME     | bionic                                                           |
-| VERSION             | "18.04.5 LTS (Bionic Beaver)"                                    |
-| VERSION_CODENAME    | bionic                                                           |
-| VERSION_ID          | "18.04"                                                          |
-| cpu_count           | 2                                                                |
-| mem.active          | 1.1 GiB                                                          |
-| mem.available       | 11.7 GiB                                                         |
-| mem.free            | 9.3 GiB                                                          |
-| mem.inactive        | 2.1 GiB                                                          |
-| mem.percent         | 7.6 %                                                            |
-| mem.total           | 12.7 GiB                                                         |
-| mem.used            | 1.1 GiB                                                          |
-| platform.version    | #1 SMP Thu Jul 23 08:00:38 PDT 2020                              |
-| python              | 3.6.9 (default, Oct  8 2020, 12:12:24)                           |
-|                     | [GCC 8.4.0]                                                      |
-| python.pip          | 19.3.1                                                           |
-| python.version      | 3.6.9                                                            |
-| sys.platform        | linux                                                            |
-| uname.machine       | x86_64                                                           |
-| uname.node          | a056fad1a2f7                                                     |
-| uname.processor     | x86_64                                                           |
-| uname.release       | 4.19.112+                                                        |
-| uname.system        | Linux                                                            |
-| uname.version       | #1 SMP Thu Jul 23 08:00:38 PDT 2020                              |
-| user                | collab                                                           |
-+---------------------+------------------------------------------------------------------+
+![Table 1](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/benchmark1.png)
 
-+----------------------------------+----------+--------+--------+---------------------+-------+--------------+--------+-------+-------------------------------------+
-| Name                             | Status   |   Time |    Sum | Start               | tag   | Node         | User   | OS    | Version                             |
-|----------------------------------+----------+--------+--------+---------------------+-------+--------------+--------+-------+-------------------------------------|
-| importdata                       | ok       |  0.236 |  0.236 | 2020-12-08 13:26:50 |       | a056fad1a2f7 | collab | Linux | #1 SMP Thu Jul 23 08:00:38 PDT 2020 |
-| import data                      | ok       |  0.328 |  0.693 | 2020-12-08 15:57:15 |       | a056fad1a2f7 | collab | Linux | #1 SMP Thu Jul 23 08:00:38 PDT 2020 |
-| Creating the train and test data | ok       |  0.012 |  0.036 | 2020-12-08 15:58:08 |       | a056fad1a2f7 | collab | Linux | #1 SMP Thu Jul 23 08:00:38 PDT 2020 |
-| Train the model                  | ok       | 25.163 | 46.741 | 2020-12-08 15:58:22 |       | a056fad1a2f7 | collab | Linux | #1 SMP Thu Jul 23 08:00:38 PDT 2020 |
-| Predict data                     | ok       |  2.086 |  3.857 | 2020-12-08 16:00:09 |       | a056fad1a2f7 | collab | Linux | #1 SMP Thu Jul 23 08:00:38 PDT 2020 |
-+----------------------------------+----------+--------+--------+---------------------+-------+--------------+--------+-------+-------------------------------------+
-
-
+![Stopwatch](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/stopwatch.png)
 
 ## 6. Conclusion and Future Works
 
