@@ -167,6 +167,6 @@ The author would like to thank Dr. Geoffrey Fox, Dr. Gregor Von Laszewski, and t
 
 [^7]: TA-Lib. [Online]. Available: <https://mrjbq7.github.io/ta-lib/func_groups/momentum_indicators.html>. [Accessed: 08-Dec-2020].
 
-[^8]: V. Bielinskas, “Multivariate Time Series Prediction with LSTM and Multiple features (Predict Google Stock Price),” Youtube, 2020. [Online]. Available: <https://www.youtube.com/watch?v=gSYiKKoREFI>. [Accessed: 08-Dec-2020].
+[^8]: V. Bielinskas, "Multivariate Time Series Prediction with LSTM and Multiple features (Predict Google Stock Price)," Youtube, 2020. [Online]. Available: <https://www.youtube.com/watch?v=gSYiKKoREFI>. [Accessed: 08-Dec-2020].
 
-[^9]: Y. Hu and X. Zhang, “Application of evolutionary computation for rule discovery in stock algorithmic trading,” Applied Soft Computing, 2015. 
+[^9]: Y. Hu and X. Zhang, "Application of evolutionary computation for rule discovery in stock algorithmic trading," Applied Soft Computing, 2015. 
