@@ -78,7 +78,7 @@ We also used MACD technical indicator as an input to our model. The MACD paramet
 
 **Figure 4:** MACD on the daily data
 
-![Monthly MACD](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/MACDonMonthly.png)
+![Monthly MACD](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/MACDonMonthly.PNG)
 
 **Figure 5:** MACD on the monthly data
 
