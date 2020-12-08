@@ -163,7 +163,7 @@ Further improvement may also be done on our model. We only used price data and M
 
 ## 7. Acknowledgements
 
-The author would like to thank Dr. Geoffrey Fox, Dr. Gregor Von Laszewski, and the associate instructors in the FA20-BL-ENGR-E534-11530: Big Data Applications course (offered in the Fall 2020 semester at Indiana University, Bloomington) for their continued assistance and suggestions concerning exploring this idea and also for their aid with preparing the various drafts of this article.
+The author would like to thank Dr. Geoffrey Fox, Dr. Gregor von Laszewski, and the associate instructors in the FA20-BL-ENGR-E534-11530: Big Data Applications course (offered in the Fall 2020 semester at Indiana University, Bloomington) for their continued assistance and suggestions concerning exploring this idea and also for their aid with preparing the various drafts of this article.
 
 ## 8. References
 
@@ -177,7 +177,7 @@ The author would like to thank Dr. Geoffrey Fox, Dr. Gregor Von Laszewski, and t
 
 [^5]: F. S. Alzazah and X. Cheng, "Recent Advances in Stock Market Prediction Using Text Mining: A Survey," E-Business [Working Title], 2020.
 
-[^6]: G. Von Laszewski, "cloudmesh/cloudmesh-common," GitHub, 2020. [Online]. Available: <https://github.com/cloudmesh/cloudmesh-common>. [Accessed: 08-Dec-2020]. 
+[^6]: G. von Laszewski, "cloudmesh/cloudmesh-common," GitHub, 2020. [Online]. Available: <https://github.com/cloudmesh/cloudmesh-common>. [Accessed: 08-Dec-2020]. 
 
 [^7]: J. Bosco and F. Khan, Stock Market Prediction and Efficiency Analysis using Recurrent Neural Network. Berlin, Germany: 2018, 2018.
 
