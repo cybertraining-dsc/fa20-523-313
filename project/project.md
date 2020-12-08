@@ -42,9 +42,9 @@ In this study, we analyzed the performance of LSTM in predicting the stock marke
 MACD is an acronym for moving average convergence/divergence. It is a widely used technical indicator to confirm either bullish or bearish phase of the market. In essence, the MACD indicator shows the perceived strength of a downward or upward movement in price. Technically, it’s an oscillator, which is a term used for indicators that fluctuate between two extreme values, for example, from 0 to 100. 
 MACD evolved from the exponential moving average (EMA), which was proposed by Gerald Appel in the 1970s. The standard MACD is the 12-day EMA subtracted by the 26-day EMA, which is also called the DIF. The MACD histogram, which was developed by T. Aspray in 1986, measures the signed distance between the MACD and its signal line calculated using the 9-day EMA of the MACD, which is called the DEA. Similar to the MACD, the MACD histogram is an oscillator that fluctuates above and below the zero line. The construction formula of MACD is given on figure 1.
 
-![Figure 1](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/MACDFormula.png)
+![MACD Formula](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/MACDFormula.png)
 
-**Figure 1:** MACD formula
+**Figure 1:** MACD formula [^11]
 
 The number of the MACD histogram is usually called the MACD bar or OSC. The analysis process of the cross and deviation strategy of DIF and DEA includes the following three steps: (i) Calculate the values of DIF and DEA, (ii)When DIF and DEA are positive, the MACD line cuts the signal line in the uptrend, and the divergence is positive, there is a buy signal confirmation, and (iii)When DIF and DEA are negative, the signal line cuts the MACD line in the downtrend, and the divergence is negative, there is a sell signal confirmation.
 
@@ -63,18 +63,23 @@ During the pre-deep learning era, Financial Time Series modelling has mainly con
 
 This project used the historical data of the Jakarta Composite Index (JKSE) from Yahoo Finance [^6]. The JKSE is a national stock index of Indonesia, which consists of 700 companies. We choose to incorporate the composite index because it has a beta value of 1, which means it is less volatile than most individual stocks to be incorporated into a model. The dataset contains the Open, High, Low, Close, and Volume data for both daily and monthly time period on the stock index. The daily data is taken from January 4th, 2000 until November 17th, 2020, while the monthly data is taken from a longer period from January 1st, 1995 to give sufficient data. Figure 2 and 3 provides a snapshot of the first few rows of the daily and monthly data respectively.
 
-![Head of Daily Data]
-(https://github.com/cybertraining-dsc/fa20-523-313/blob/main/project/images/DailyHead.PNG)
+![Head of Daily Data](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/DailyHead.png)
 
 **Figure 2:** Snapshot of the first rows of the daily data
 
-![Head of Monthly Data]
-(https://github.com/cybertraining-dsc/fa20-523-313/blob/main/project/images/MonthlyHead.PNG)
+![Head of Daily Data](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/MonthlyHead.png)
 
 **Figure 3:** Snapshot of the first rows of the monthly data
 
-We also used MACD technical indicator as an input to our model. The MACD parameters are generated using the ta-lib library [^7] based on the Yahoo Finance data. Figure 3 and 4 provides a snapshot of the first few rows of the daily and monthly data respectively after incorporating the MACD technical indicator.
+We also used MACD technical indicator as an input to our model. The MACD parameters are generated using the ta-lib library [^7] based on the Yahoo Finance data. Figure 4 and 5 provides a snapshot of the first few rows of the daily and monthly data respectively after incorporating the MACD technical indicator.
 
+![Daily MACD](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/MACDonDaily.png)
+
+**Figure 4:** MACD on the daily data
+
+![Monthly MACD](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/MACDonMonthly.png)
+
+**Figure 5:** MACD on the monthly data
 
 ## 4. Methodology
 
@@ -98,7 +103,11 @@ A multivariate LSTM model with two hidden layer is used, with dropout parameter 
 
 ## 5. Results
 
-Figure 6 shows mean squared error (MSE) curve of the prediction in the training dataset for given epoch. It shows that the MSE converge at 30 epochs, with MSE of . 
+Figure 6 shows mean squared error (MSE) curve of the prediction in the training dataset for each given epoch. It shows that the MSE converge after 20 epochs, with the value of 0.0243.
+
+![Epoch Loss](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/LossEpochs.png)
+
+**Figure 5:** MSE on the training data for each given epoch 
 
 We then use this number of epochs for different time frames. Figure 7 shows the root mean squared error (RMSE) in the training dataset for each time frame. It clearly shows that the RMSE become bigger on a longer time frame. It can still predict 5 days ahead with RMSE of , but the RMSE become when the model tries to predict 30 days ahead.
 
