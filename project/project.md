@@ -2,7 +2,7 @@
 
 [![Check Report](https://github.com/cybertraining-dsc/fa20-523-313/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-313/actions)
 [![Status](https://github.com/cybertraining-dsc/fa20-523-313/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-313/actions)
-Status: in progress, Type: Project
+Status: final Type: Project
 
 
 
@@ -107,15 +107,38 @@ Figure 6 shows mean squared error (MSE) curve of the prediction in the training 
 
 ![Epoch Loss](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/LossEpochs.png)
 
-**Figure 5:** MSE on the training data for each given epoch 
+**Figure 6:** MSE on the training data for each given epoch 
 
-We then use this number of epochs for different time frames. Figure 7 shows the root mean squared error (RMSE) in the training dataset for each time frame. It clearly shows that the RMSE become bigger on a longer time frame. It can still predict 5 days ahead with RMSE of , but the RMSE become when the model tries to predict 30 days ahead.
+We then use this number of epochs for different time frames. Figure 7 shows the root mean squared error (RMSE) in the training dataset for each time frame. It clearly shows that the RMSE become bigger on a longer time frame. When predicting the next day period, the RMSE is 237.28, while when predicting 30 days ahead, the RMSE doubles to 583.09. But overall, these values are still acceptable because they are smaller than the standar deviation of the actual dataset of 735.96.
+
+![RMSE](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/RMSEonTimeFrame.png)
+
+**Figure 7:** RMSE on the training data for each time frame 
 
 We then try this model on the testing data. Figure 8 shows the RMSE in the testing dataset for each time frame. As expected, the RMSE is still low when predicting 5 days ahead, but it becomes bigger when predicting on a longer time frames.
 
+  ![Epoch Loss](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/LossEpochs.png)
+
+**Figure 8:** RMSE on the testing data for each time frame 
+
+
 Figure 9 and Figure 10 compare the actual and predicted value for 1 day and 30 days time frames respectively. It can be seen that the model cannot predict steep ramps in the price change, thus it is lagged from the actual price. The predicted price become furtherly lagged when predicting for a longer time frame, thus resulting in a bigger RMSE.
 
+![Next Day Prediction](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/OneDayPredict.png)
+
+**Figure 9:** Next day prediction and actual values of the JKSE  
+
+![30 Days Prediction](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/ThirtyDaysPredict.png)
+
+**Figure 10:** Prediction of 30 days time frame and actual values of the JKSE 
+
+
 We then use the monthly stock data, and observe whether this can give a better prediction than the daily data for the same time frame. Figure 11 compare the actual and predicted values for the monthly data. When using the monthly data, the RMSE is XX when predicting the next month's price. In fact, it still gives RMSE of XX when predicting the price for two months ahead.
+
+![Monthly Prediction](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/LossEpochs.png)
+
+**Figure 11:** Next month prediction and actual values of the JKSE using monthly data
+
 
 ## 6. Conclusion and Future Works
 
@@ -129,18 +152,21 @@ The author would like to thank Dr. Geoffrey Fox, Dr. Gregor Von Laszewski, and t
 
 ## 8. References
 
-[^1]: A. Nikfarjam, E. Emadzadeh, and S. Muthaiyah, "Text mining approaches for stock market prediction," 2010 The 2nd International Conference on Computer and Automation Engineering (ICCAE), 2010.
+[^1]: A. Mostafa and Y. S., "Introduction to financial forecasting. Applied Intelligence," Applied Intelligence, 1996. 
 
-[^2]: A. Singh, "Stock Price Prediction Using Machine Learning: Deep Learning, " Analytics Vidhya, 18-Oct-2020. [Online]. Available: <https://www.analyticsvidhya.com/blog/2018/10/predicting-stock-price-machine-learningnd-deep-learning-techniques-python/>. [Accessed: 20-Oct-2020].
+[^2]: "Composite Index (JKSE) Charts, Data &amp; News," Yahoo! Finance, 08-Dec-2020. [Online]. Available: https://finance.yahoo.com/quote/^JKSE/. [Accessed: 08-Dec-2020]. 
 
+[^3]: D. Shah, H. Isah, and F. Zulkernine, "Stock Market Analysis: A Review and Taxonomy of Prediction Techniques," International Journal of Financial Studies, vol. 7, no. 2, p. 26, 2019. 
+[^4]: F. Isnaini, "cybertraining-dsc/fa20-523-313," GitHub, 08-Dec-2020. [Online]. Available: https://github.com/cybertraining-dsc/fa20-523-313/blob/main/project/code/multivariate.ipynb. [Accessed: 08-Dec-2020].
 
-[^3]: C. Stoean, W. Paja, R. Stoean, and A. Sandita, "Deep architectures for long-term stock price prediction with a heuristic-based strategy for trading simulations," Plos One, vol. 14, no. 10, 2019.
+[^5]: F. S. Alzazah and X. Cheng, "Recent Advances in Stock Market Prediction Using Text Mining: A Survey," E-Business [Working Title], 2020.
 
-[^4]: F. S. Alzazah and X. Cheng, "Recent Advances in Stock Market Prediction Using Text Mining: A Survey," E-Business [Working Title], 2020.
+[^5]: J. Bosco and F. Khan, Stock Market Prediction and Efficiency Analysis using Recurrent Neural Network. Berlin, Germany: 2018, 2018.
 
-[^5]: N. Chauhan, "Stock Market Forecasting Using Time Series Analysis," KDnuggets, 2020. [Online]. Available: <https://www.kdnuggets.com/2020/01/stock-market-forecasting-time-series-analysis.html>. [Accessed: 20-Oct-2020].
+[^6]: J. Wang and J. Kim, "Predicting Stock Price Trend Using MACD Optimized by Historical Volatility."
 
-[^6]: N. Milosevic, "Equity forecast: Predicting long term stock price movement using machine learning," 2018.
+[^7]: TA-Lib. [Online]. Available: https://mrjbq7.github.io/ta-lib/func_groups/momentum_indicators.html. [Accessed: 08-Dec-2020].
 
-[^7]: S. Khedkar, "Stock Market Prediction Using Deep Learning and Python," Medium, 27-Sep-2019. [Online]. Available: <https://medium.com/analytics-vidhya/stock-market-prediction-using-python-article-4-the-next-recession-923185a2736f>. [Accessed: 20-Oct-2020].
+[^8]: V. Bielinskas, “Multivariate Time Series Prediction with LSTM and Multiple features (Predict Google Stock Price),” Youtube, 2020. [Online]. Available: https://www.youtube.com/watch?v=gSYiKKoREFI. [Accessed: 08-Dec-2020].
 
+[^9]: Y. Hu and X. Zhang, “Application of evolutionary computation for rule discovery in stock algorithmic trading,” Applied Soft Computing, 2015. 
