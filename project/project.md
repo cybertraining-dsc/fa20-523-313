@@ -123,7 +123,7 @@ We used callback function to find the best number of epochs in the model. Figure
 
 Figure 7 shows the root mean squared error (RMSE) on the testing dataset for each time frame. It clearly shows that the RMSE becomes bigger on a longer time frame. When predicting the next day period, the RMSE is 323.41, while when predicting 30 days ahead, the RMSE increase to 481.32. But overall, these values are still acceptable because they are smaller than the standard deviation of the actual dataset of 667.31.
 
-![RMSE](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/RMSEonTimeFrame.png)
+![RMSE](https://github.com/cybertraining-dsc/fa20-523-313/raw/main/project/images/rmseontimeframe.png)
 
 **Figure 7:** RMSE on the training data for each time frame 
 
