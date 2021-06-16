@@ -1,4 +1,14 @@
-# Analyzing LSTM Performance on Predicting the Stock Market for Multiple Time Steps
+---
+date: 2021-03-15
+title:  Analyzing LSTM Performance on Predicting the Stock Market for Multiple Time Steps
+linkTitle: Stock MArket
+tags: ["project", "ai", "finance"]
+description: Analyzing LSTM Performance on Predicting the Stock Market for Multiple Time Steps
+author: Fauzan Isnaini
+resources:
+- src: "**.{png,jpg}"
+  title: "Image #:counter"
+---
 
 [![Check Report](https://github.com/cybertraining-dsc/fa20-523-313/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-313/actions)
 [![Status](https://github.com/cybertraining-dsc/fa20-523-313/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-313/actions)
