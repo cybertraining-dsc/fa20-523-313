@@ -16,14 +16,14 @@ resources:
 Status: final Type: Project
 
 
-
 Fauzan Isnaini, [fa20-523-313](https://github.com/cybertraining-dsc/fa20-523-313/), [Edit](https://github.com/cybertraining-dsc/fa20-523-313/blob/main/project/project.md)
 
 {{% pageinfo %}}
 
 ## Abstract
 
-Predicting the stock market has been an attractive field of research for a long time because it promises big wealth for anyone who can find the secret. For a long time, traders around the world have been relying on fundamental analysis and technical analysis to predict the market. Now with the advancement of big data, some financial institutions are beginning to predict the market by creating a model of the market using machine learning. While some researches produce promising results, most of them are directed at predicting the next day's market behavior. In this study, we created an LSTM model to predict the market for multiple time frames. We then analyzed the performance of the model for some different time periods. From our observations, LSTM is good at predicting 30 time steps ahead, but the RMSE became larger as the time frame gets longer.
+Predicting the stock market has been an attractive
+field of research for a long time because it promises big wealth for anyone who can find the secret. For a long time, traders around the world have been relying on fundamental analysis and technical analysis to predict the market. Now with the advancement of big data, some financial institutions are beginning to predict the market by creating a model of the market using machine learning. While some researches produce promising results, most of them are directed at predicting the next day's market behavior. In this study, we created an LSTM model to predict the market for multiple time frames. We then analyzed the performance of the model for some different time periods. From our observations, LSTM is good at predicting 30 time steps ahead, but the RMSE became larger as the time frame gets longer.
 
 
 
